@@ -1,2 +1,2 @@
 mossman
-https://rqik.github.io/mossmanPa/
+https://rqik.github.io/mossmanPa/app
