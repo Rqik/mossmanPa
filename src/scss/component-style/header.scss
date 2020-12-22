@@ -1,0 +1,104 @@
+
+@mixin lg {
+	@media (max-width: (1190px)) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (max-width: (768px)) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (max-width: (540px)) {
+		@content;
+	}
+}
+.header {
+  width: 100%;
+  // height: 100%;
+  position: absolute;
+
+  // top: 0;
+  // left: 0;
+  z-index: 20;
+
+
+  &-logo{
+    width: 100%;
+    // @include md {
+    //   // width: 150px;
+    //   svg{
+    //     width: 150px;
+    //   }
+    // }
+  }
+  .logo-text {
+    color: #fff;
+  }
+
+  &-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    cursor: pointer;
+    width: 100%;
+    @include md {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    a {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 16px;
+      z-index: 5000 !important;
+      white-space: nowrap;
+
+
+    }
+
+    &_tel{
+      &::before{
+        content: '';
+        width: 30px;
+        height: 30px;
+        display: block;
+        border-radius: 50%;
+        background: url(../img/ico-tel.svg) no-repeat center;
+        background-size: 18px ;
+        background-color:  #d41a3b;
+        margin-right: 15px;
+        @include md {
+          width: 20px;
+          height: 20px;
+          background-size: 12px ;
+        }
+      }
+    }
+    &_email{
+      &::before{
+        content: '';
+        width: 20px;
+        height: 30px;
+        display: block;
+        border-radius: 0px;
+        // border-radius: 50%;
+        background: url(../img/ico-marker-1.svg) no-repeat center;
+        background-size: contain;
+        margin-right: 15px;
+        @include md {
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  z-index: 100;
+}
+
+

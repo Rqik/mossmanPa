@@ -1,0 +1,18 @@
+@import "vars";
+@import "mixins";
+@import "./mixins/breakpoint";
+@import "fonts";
+@import "vendor";
+@import "settings";
+@import "style";
+@import "./_bootstrap.css";
+
+
+@import "./component-style/main-slide.scss";
+@import "./component-style/header.scss";
+@import "./component-style/footer.scss";
+
+.body-wrap{
+  min-width: 460px;
+  // width: 100vw;
+}

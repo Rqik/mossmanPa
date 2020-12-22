@@ -1,0 +1,16 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="1920" height="804" viewBox="0 0 1920 804">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #d41a3b;
+      }
+    </style>
+  </defs>
+  <title>для баннера</title>
+  <path class="cls-1" d="M0,646V804H1920V0L764.36,671.35C626.58,756.59,525.82,793.18,397.23,793.18,247.8,793.18,147.41,732,0,646Z" transform="translate(0)"/>
+  <path class="cls-2" d="M1920,221.88,1444.63,494.22c-169.31,81.7-331.32,97.76-487.93,65.4L1920,0Z" transform="translate(0)"/>
+</svg>

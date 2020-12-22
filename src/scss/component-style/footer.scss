@@ -1,0 +1,62 @@
+.footer {
+  padding: 100px 0;
+  overflow: hidden;
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &_link {
+      width: 35px;
+
+    }
+  }
+
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 1.44;
+    font-weight: 400;
+
+    h3 {
+      font-weight: 600;
+      color: #52575C;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-size: 18px;
+      color: #141718;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: #d41a3b;
+        transform: translateX(7px);
+      }
+    }
+
+    &_phone {}
+  }
+
+  &_top {
+    width: 30%;
+  }
+
+  &_bot {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+
+    @include md{
+      flex-direction: column;
+    }
+  }
+}
