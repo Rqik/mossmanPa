@@ -1,6 +1,47 @@
+@mixin lg {
+  @media (max-width: (1190px)) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: (540px)) {
+    @content;
+  }
+}
+
 .footer {
   padding: 100px 0;
   overflow: hidden;
+
+  @include md {
+    flex-direction: column-reverse;
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+
+    @include md {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #141718;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: #d41a3b;
+
+      }
+
+    }
+  }
 
   .social {
     display: flex;
@@ -8,8 +49,19 @@
     gap: 20px;
 
     &_link {
-      width: 35px;
+      width: 48px;
 
+      svg {
+        transition: fill .3s ease-in-out;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        svg {
+          fill: #d41a3b;
+        }
+      }
     }
   }
 
@@ -46,6 +98,19 @@
 
   &_top {
     width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @include md {
+      width: 100%;
+      margin-top: 20px;
+      flex-direction: row;
+      align-items: flex-end;
+      // justify-content: flex-end;
+    }
   }
 
   &_bot {
@@ -55,7 +120,7 @@
     justify-content: flex-end;
     gap: 30px;
 
-    @include md{
+    @include md {
       flex-direction: column;
     }
   }

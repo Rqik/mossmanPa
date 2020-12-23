@@ -177,11 +177,15 @@
 
   &__title {
     margin-top: 3rem;
-    // margin-right: 30%;
     text-transform: uppercase;
-
     font-weight: 600;
     font-size: 46px;
+    @include md {
+      font-size: 36px;
+    }
+    @include sm{
+      font-size: 28px;
+    }
   }
 
   &__text {
@@ -190,18 +194,20 @@
     // margin-left: 30%;
     font-size: 22px;
     line-height: 1.46;
-
+    @include md {
+      font-size: 18px;
+    }
+    @include sm{
+      font-size: 16px;
+    }
   }
 }
 
-
-
 .main-slide {
   position: relative;
-  // background-color: #21553b;
-  // min-height: 100vh;
   z-index: 10;
   overflow: hidden;
+
   &::after {
     content: '';
     position: absolute;
@@ -209,9 +215,9 @@
     top: -1px;
     left: -1px;
     right: -1px;
-    bottom: -1px;
+    bottom: -2px;
     background: url(../img/mossman-banner-bg.svg) no-repeat bottom;
-    background-size: contain;
+    background-size: 100%;
     pointer-events: none;
     z-index: 30;
   }
@@ -219,7 +225,7 @@
     width: 100%;
       height: 100vh;
       @include md{
-        height: 80vh;
+        // height: 80vh;
       }
   }
 
@@ -228,7 +234,7 @@
     position: relative;
       height: 100vh;
       @include md{
-        height: 80vh;
+        // height: 80vh;
       }
     &::before {
       content: '';
@@ -246,7 +252,7 @@
       object-fit: cover;
         height: 100vh;
         @include md{
-          height: 80vh;
+          // height: 80vh;
         }
     }
   }
@@ -277,6 +283,7 @@
       align-items: flex-start;
       margin-top: 0;
       @include lg{
+        margin-top: 100px;
       }
       @include md {
 
@@ -534,9 +541,14 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 30px;
-
+  @include sm{
+    flex-direction: column;
+  }
   &-info {
     width: 50%;
+    @include sm{
+      width: 100%;
+    }
   }
 
   &_title {
