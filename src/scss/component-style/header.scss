@@ -1,21 +1,21 @@
-
 @mixin lg {
-	@media (max-width: (1190px)) {
-		@content;
-	}
+  @media (max-width: (1190px)) {
+    @content;
+  }
 }
 
 @mixin md {
-	@media (max-width: (768px)) {
-		@content;
-	}
+  @media (max-width: (768px)) {
+    @content;
+  }
 }
 
 @mixin sm {
-	@media (max-width: (540px)) {
-		@content;
-	}
+  @media (max-width: (540px)) {
+    @content;
+  }
 }
+
 .header {
   width: 100%;
   // height: 100%;
@@ -26,15 +26,16 @@
   z-index: 20;
   overflow: hidden;
 
-&-menu{
-  @include sm {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
+  &-menu {
+    @include sm {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+    }
   }
-}
-  &-logo{
+
+  &-logo {
     width: 100%;
     // @include md {
     //   // width: 150px;
@@ -44,6 +45,7 @@
     // }
 
   }
+
   .logo-text {
     color: #fff;
   }
@@ -54,18 +56,22 @@
     gap: 20px;
     cursor: pointer;
     width: 100%;
-justify-content: flex-end;
+    justify-content: flex-end;
+
     @include md {
       flex-direction: column;
       align-items: flex-end;
       gap: 10px;
-justify-content: flex-start;
+      justify-content: flex-start;
 
     }
+
     @include sm {
       margin-bottom: 20px;
       flex-direction: row;
+      justify-content: space-between;
     }
+
     a {
       cursor: pointer;
       display: flex;
@@ -74,32 +80,38 @@ justify-content: flex-start;
       font-size: 16px;
       z-index: 5000 !important;
       white-space: nowrap;
+
       @include sm {
-       font-size: 14px;
+        font-size: 14px;
       }
 
     }
 
-    &_tel{
-      &::before{
+    &_tel {
+      &::before {
         content: '';
         width: 30px;
         height: 30px;
         display: block;
         border-radius: 50%;
         background: url(../img/ico-tel.svg) no-repeat center;
-        background-size: 18px ;
-        background-color:  #d41a3b;
+        background-size: 18px;
+        background-color: #d41a3b;
         margin-right: 15px;
+
         @include md {
           width: 20px;
           height: 20px;
-          background-size: 12px ;
+          background-size: 12px;
+        }
+        @include sm{
+          display: none;
         }
       }
     }
-    &_email{
-      &::before{
+
+    &_email {
+      &::before {
         content: '';
         width: 20px;
         height: 30px;
@@ -109,8 +121,12 @@ justify-content: flex-start;
         background: url(../img/ico-marker-1.svg) no-repeat center;
         background-size: contain;
         margin-right: 15px;
+
         @include md {
           height: 20px;
+        }
+        @include sm{
+          display: none;
         }
       }
     }
@@ -118,5 +134,3 @@ justify-content: flex-start;
 
   z-index: 100;
 }
-
-
